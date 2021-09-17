@@ -1,4 +1,3 @@
-
 ## Simple
 
 > A TypeScript simple template
@@ -23,7 +22,9 @@ $ npm start  # visit http://localhost:3333
 │   ├── index.[j,t]s
 ├── public/
 │   ├── index.html                 # 应用入口 HTML
-│   └── favicon.png                # Favicon
+│   ├── favicon.png                # Favicon
+│   ├── background.js              # 后台脚本
+│   └── manifest.json              # 插件的配置文件
 ├── src/                           # 源码路径
 │   ├── components/                # 自定义业务组件
 │   │   └── Guide/

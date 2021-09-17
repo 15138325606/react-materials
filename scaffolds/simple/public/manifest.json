@@ -1,0 +1,36 @@
+{
+    "name": "icejsSimpleApp",
+    "description":"icejs开发Chrome插件",
+    "manifest_version": 2,
+    "version": "1.0",
+    "icons":{
+        "16":"image/favicon.png",
+        "48":"image/favicon.png",
+        "128":"image/favicon.png"
+    },
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_icon": "image/favicon.png",
+        "default_title": "这是一个Chrome插件"
+      },
+    "permissions": [
+        "contextMenus",
+        "notifications",
+        "tabs"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "js": [
+            "lib/jquery3.4.min.js",
+            "content_script.js"
+        ],
+        "css": ["base.css"]
+    }],
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    }
+}
