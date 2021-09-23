@@ -1,5 +1,5 @@
 import { IRouterConfig } from 'ice';
-import Home from '@/pages/Home';
+import Home from '@/pages/Dashboard/Home';
 
 const routerConfig: IRouterConfig[] = [
   {

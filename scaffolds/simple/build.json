@@ -1,3 +1,4 @@
 {
-  "publicPath": "./"
+  "publicPath": "./",
+  "mpa":  true
 }
