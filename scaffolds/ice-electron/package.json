@@ -2,6 +2,8 @@
   "name": "@alifd/scaffold-simple",
   "version": "1.0.1",
   "description": "使用 TypeScript，未使用任何 UI 库。",
+  "main": "main.js",
+  "homepage": ".",
   "files": [
     "src/",
     "build/",
@@ -21,6 +23,7 @@
     "jsconfig.json"
   ],
   "dependencies": {
+    "electron": "^15.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -39,7 +42,8 @@
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
     "eslint:fix": "npm run eslint -- --fix",
-    "stylelint": "stylelint \"**/*.{css,scss,less}\""
+    "stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "electron-start": "electron ."
   },
   "publishConfig": {
     "access": "public"
