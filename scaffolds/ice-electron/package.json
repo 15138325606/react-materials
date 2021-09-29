@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "使用 TypeScript，未使用任何 UI 库。",
   "main": "main.js",
+  "license": "MIT",
   "homepage": ".",
   "files": [
     "src/",
@@ -23,11 +24,14 @@
     "jsconfig.json"
   ],
   "dependencies": {
-    "electron": "^15.0.0",
+    
+    "electron-is-dev": "^1.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "electron": "^15.0.0",
+    "electron-builder": "^21.2.0",
     "@iceworks/spec": "^1.0.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
@@ -43,7 +47,10 @@
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
     "eslint:fix": "npm run eslint -- --fix",
     "stylelint": "stylelint \"**/*.{css,scss,less}\"",
-    "electron-start": "electron ."
+    "electron-start": "electron .",
+    "dist-win32": "electron-builder --win --ia32",
+    "dist-win64": "electron-builder --win --x64",
+    "dist-mac": "electron-builder --mac"
   },
   "publishConfig": {
     "access": "public"
@@ -57,5 +64,15 @@
     "title": "Simple",
     "category": "Basic",
     "screenshot": "https://img.alicdn.com/tfs/TB1qdRsv.Y1gK0jSZFCXXcwqXXa-2878-1590.png"
+  },
+  "build": {
+    "productName": "my-electron",
+    "appId": "com.my-electron.app",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*"
+    ]
   }
 }
