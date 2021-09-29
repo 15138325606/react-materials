@@ -67,7 +67,7 @@
   },
   "build": {
     "productName": "my-electron",
-    "appId": "com.my-electron.app",
+    "appId": "com.example.app",
     "directories": {
       "output": "dist"
     },
