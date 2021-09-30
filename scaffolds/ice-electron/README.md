@@ -1,4 +1,3 @@
-
 ## Simple
 
 > A TypeScript simple template
@@ -11,6 +10,9 @@ $ npm install
 
 # 启动服务
 $ npm start  # visit http://localhost:3333
+
+# 启动electron
+npm run electron-start
 ```
 
 [More docs](https://ice.work/docs/guide/about).
@@ -43,4 +45,22 @@ $ npm start  # visit http://localhost:3333
 ├── .stylelintrc.[j,t]s
 ├── .gitignore
 └── [j,t]sconfig.json
+```
+
+## 打包
+
+打包react代码
+
+```
+yarn build
+```
+
+打包electron安装包
+
+```
+<!--mac环境-->
+yarn dist-mac
+
+<!--windows环境-->
+yarn dist-win64
 ```
